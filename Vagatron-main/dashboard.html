@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard principal</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <h1 class="logo">VAGATRON</h1>
+        <p class="subtitulo">Sistema de Estacionamento</p>
+
+        <img src="imagens/UGB.png" alt="UGB" class="ugb">
+
+        <nav>
+
+            <a href="dashboard.html" class="menu ativo">
+                Dashboard
+            </a>
+
+            <a href="veiculos.html" class="menu">
+                Veículos
+            </a>
+
+            <a href="entrada-saida.html" class="menu">
+                Entrada e Saída
+            </a>
+
+            <a href="relatorios.html" class="menu">
+                Relatórios
+            </a>
+
+            <a href="usuarios.html" class="menu">
+                Usuários
+            </a>
+
+            <a href="configuracoes.html" class="menu">
+                Configurações
+            </a>
+
+        </nav>
+
+        <a href="login.html" class="sair">
+            Sair
+        </a>
+
+    </div>
+
+    <main class="conteudo">
+
+    <div class="container">
+        <h1 class="Dashboard">Dashboard</h1>
+        <p class="frase">Bem vindo! Aqui está o resumo do estacionamento hoje.</p>
+    </div>
+<div class="cards">
+
+    <div class="card">
+        <h2>Veículos no estacionamento</h2>
+        <span id="totalVeiculos"></span>
+        <p>Em tempo real</p>
+    </div>
+
+    <div class="card">
+        <h2>Entradas de hoje</h2>
+        <span id="entradasHoje"></span>
+        <p>Total de entradas</p>
+    </div>
+
+    <div class="card">
+        <h2>Saídas de hoje</h2>
+        <span id="saidasHoje"></span>
+        <p>Total de saídas</p>
+    </div>
+
+    <div class="card">
+        <h2>Vagas disponíveis</h2>
+        <span id="vagasDisponiveis"></span>
+        <p>de 170 vagas</p>
+    </div>
+
+</div>
+    <div class="cards2">
+        <h1 class="texto">Resumo de entradas e saídas de hoje</h1>
+        <table class="tabelaResumo">
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Placa</th>
+                    <th>Descrição</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody class="corpoTabela">
+
+            </tbody>
+        </table>
+    </div>
+        </main>
+
+</body>
+
+</html>

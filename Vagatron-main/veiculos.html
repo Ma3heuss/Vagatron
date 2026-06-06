@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Veículos</title>
+
+    <link rel="stylesheet" href="css/veiculos.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <h1 class="logo">VAGATRON</h1>
+        <p class="subtitulo">Sistema de Estacionamento</p>
+
+        <img src="imagens/UGB.png" alt="UGB" class="ugb">
+
+        <nav>
+            <a href="dashboard.html" class="menu">Dashboard</a>
+            <a href="veiculos.html" class="menu ativo">Veículos</a>
+            <a href="#" class="menu">Entrada e Saída</a>
+            <a href="#" class="menu">Relatórios</a>
+            <a href="#" class="menu">Usuários</a>
+            <a href="#" class="menu">Configurações</a>
+        </nav>
+
+        <a href="login.html" class="sair">Sair</a>
+
+    </div>
+
+    <main class="conteudo">
+
+        <div class="cabecalho">
+
+            <div>
+                <h1>Controle de Veículos</h1>
+                <p>Gerencie todos os veículos cadastrados no sistema</p>
+            </div>
+
+            <button class="btn-cadastrar">
+                <i class="fa-solid fa-plus"></i>
+                Cadastrar veículo
+            </button>
+
+        </div>
+
+        <div class="filtros">
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Buscar por placa ou proprietário">
+
+            <select id="status">
+                <option value="">Todos os status</option>
+                <option value="Estacionado">Estacionado</option>
+                <option value="Fora">Fora</option>
+            </select>
+
+            <select id="tipo">
+                <option value="">Todos os tipos</option>
+                <option value="Carro">Carro</option>
+                <option value="Moto">Moto</option>
+            </select>
+
+        </div>
+
+        <div class="tabela-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Veículo</th>
+                        <th>Placa</th>
+                        <th>Proprietário</th>
+                        <th>Tipo</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaVeiculos">
+
+                    <tr>
+                        <td>Toyota Corolla</td>
+                        <td>ABC1D23</td>
+                        <td>João da Silva</td>
+                        <td>Carro</td>
+                        <td><span class="status verde">Estacionado</span></td>
+                        <td>
+                            <button><i class="fa-solid fa-eye"></i></button>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button class="excluir">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Honda HR-V</td>
+                        <td>XYZ9A87</td>
+                        <td>Maria Oliveira</td>
+                        <td>Carro</td>
+                        <td><span class="status vermelho">Fora</span></td>
+                        <td>
+                            <button><i class="fa-solid fa-eye"></i></button>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button class="excluir">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Yamaha Fazer 250</td>
+                        <td>RTY5E67</td>
+                        <td>Lucas Ferreira</td>
+                        <td>Moto</td>
+                        <td><span class="status verde">Estacionado</span></td>
+                        <td>
+                            <button><i class="fa-solid fa-eye"></i></button>
+                            <button><i class="fa-solid fa-pen"></i></button>
+                            <button class="excluir">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+<script src="script.js"></script>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+
+            <h2 id="tituloModal">Cadastrar Veículo</h2>
+
+            <input type="text" id="veiculo" placeholder="Veículo">
+            <input type="text" id="placa" placeholder="Placa">
+            <input type="text" id="proprietario" placeholder="Proprietário">
+
+            <select id="tipoModal">
+                <option value="Carro">Carro</option>
+                <option value="Moto">Moto</option>
+            </select>
+
+            <select id="statusModal">
+                <option value="Estacionado">Estacionado</option>
+                <option value="Fora">Fora</option>
+            </select>
+
+            <div class="acoes-modal">
+                <button id="salvarVeiculo">Salvar</button>
+                <button id="fecharModal">Cancelar</button>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <script src="js/veiculos.js"></script>
+</body>
+</html>
