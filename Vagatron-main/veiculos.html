@@ -140,35 +140,59 @@
 
     </main>
 
-<script src="script.js"></script>
 
-    <div class="modal" id="modal">
-        <div class="modal-content">
+    <div class="modal-content">
 
-            <h2 id="tituloModal">Cadastrar Veículo</h2>
+        <h2 id="tituloModal">Cadastrar Veículo</h2>
 
-            <input type="text" id="veiculo" placeholder="Veículo">
-            <input type="text" id="placa" placeholder="Placa">
-            <input type="text" id="proprietario" placeholder="Proprietário">
+        <label>Veículo</label>
+        <input type="text" id="veiculo">
 
-            <select id="tipoModal">
-                <option value="Carro">Carro</option>
-                <option value="Moto">Moto</option>
-            </select>
+        <div class="form-grid">
 
-            <select id="statusModal">
-                <option value="Estacionado">Estacionado</option>
-                <option value="Fora">Fora</option>
-            </select>
+            <div>
+                <label>Placa</label>
+                <input type="text" id="placa">
+            </div>
 
-            <div class="acoes-modal">
-                <button id="salvarVeiculo">Salvar</button>
-                <button id="fecharModal">Cancelar</button>
+            <div>
+                <label>Tipo</label>
+                <select id="tipoModal">
+                    <option>Carro</option>
+                    <option>Moto</option>
+                </select>
             </div>
 
         </div>
-    </div>
 
+        <label>Proprietário</label>
+        <input type="text" id="proprietario">
+
+        <div class="form-grid">
+
+            <div>
+                <label>Status</label>
+                <select id="statusModal">
+                    <option>Estacionado</option>
+                    <option>Fora</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="acoes-modal">
+
+            <button id="fecharModal">
+                Cancelar
+            </button>
+
+            <button id="salvarVeiculo">
+                Salvar Veículo
+            </button>
+
+        </div>
+
+    </div>
     
     <script src="js/veiculos.js"></script>
 </body>
