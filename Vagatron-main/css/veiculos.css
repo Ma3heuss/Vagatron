@@ -37,8 +37,10 @@ body{
 }
 
 .ugb{
-    width:170px;
+    width:110px;
+    display:block;
     margin:0 auto 40px;
+    height:100px;
 }
 
 nav{
@@ -57,7 +59,7 @@ nav{
 }
 
 .menu:hover{
-    background:#eef4ff;
+    background:rgb(79, 79, 252);
 }
 
 .ativo{
@@ -369,4 +371,38 @@ td button i{
 
 #salvarVeiculo:hover{
     background:#0a4bc0;
+}
+
+.casa-preta {
+    width: 30px;
+    height:30px;
+}
+
+.carro-preto {
+    width: 30px;
+    height:30px;
+}
+
+.seta-preta {
+    width: 30px;
+    height:30px;
+}
+.relatorio {
+    width: 30px;
+    height:30px;
+}
+
+.usuario {
+    width: 30px;
+    height:30px;   
+}
+
+.configuracao {
+    width:30px;
+    height:30px;
+}
+
+.sair1 {
+    width:30px;
+    height:30px;
 }
