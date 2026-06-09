@@ -7,8 +7,24 @@ const filtroTipo = document.getElementById("tipo");
 const modal = document.getElementById("modal");
 
 const btnCadastrar = document.querySelector(".btn-cadastrar");
+btnCadastrar.addEventListener("click", () => {
+
+    editando = null;
+
+    document.getElementById("veiculo").value = "";
+    document.getElementById("placa").value = "";
+    document.getElementById("proprietario").value = "";
+
+    modal.style.display = "flex";
+});
+
 const btnSalvar = document.getElementById("salvarVeiculo");
 const btnFechar = document.getElementById("fecharModal");
+btnFechar.addEventListener("click", () => {
+
+    modal.style.display = "none";
+});
+
 
 let editando = null;
 
