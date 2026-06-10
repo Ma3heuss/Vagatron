@@ -23,6 +23,7 @@ body{
 
 .sidebar{
     width:250px;
+    flex-shrink:0;
     background:#fff;
     border-right:1px solid #eaeaea;
     padding:30px 20px;
@@ -109,6 +110,7 @@ nav{
 
 .conteudo{
     flex:1;
+    min-width:0;
     padding:25px;
 }
 
@@ -141,6 +143,7 @@ nav{
     display:flex;
     gap:15px;
     align-items:center;
+    flex-wrap:wrap;
     border-left:1px solid var(--cinza-borda);
     border-right:1px solid var(--cinza-borda);
 }
@@ -197,6 +200,7 @@ nav{
     padding:0 20px 20px;
     border:1px solid var(--cinza-borda);
     border-top:none;
+    overflow-x:auto;
 }
 
 table{
@@ -214,6 +218,7 @@ th{
     font-weight:600;
     text-align:left;
     padding:22px;
+    white-space:nowrap;
 }
 
 td{
@@ -243,6 +248,7 @@ tbody tr:hover{
     border-radius:30px;
     font-size:13px;
     font-weight:600;
+    white-space:nowrap;
 }
 
 .tipo img{
@@ -270,6 +276,7 @@ tbody tr:hover{
     font-weight:600;
     background:#e8f9ee;
     color:#1f8f4c;
+    white-space:nowrap;
 }
 
 /* miniatura do veiculo */
@@ -306,6 +313,7 @@ tbody tr:hover{
 .paginacao-botoes{
     display:flex;
     gap:8px;
+    flex-wrap:wrap;
 }
 
 .paginacao-botoes button{
@@ -351,12 +359,30 @@ tbody tr:hover{
 
 /* ---------------- Responsividade ----------------*/
 
+/* telas grandes - reduz um pouco a folga em notebooks menores */
+
+@media (max-width: 1280px){
+
+    .cabecalho{
+        padding:30px;
+    }
+
+    .cabecalho h1{
+        font-size:2rem;
+    }
+}
+
 /* tablet - 1024px */
 
 @media (max-width: 1024px){
 
     .sidebar{
         width:210px;
+        padding:25px 16px;
+    }
+
+    .conteudo{
+        padding:20px;
     }
 
     .cabecalho{
@@ -375,12 +401,14 @@ tbody tr:hover{
     }
 
     .filtros input[type="date"],
-    .filtros select,
-    #pesquisa{
-        width:100%;
+    .filtros select{
         flex:1 1 200px;
+        width:auto;
     }
 
+    #pesquisa{
+        flex:1 1 100%;
+    }
 }
 
 /* celular - 768px */
@@ -441,6 +469,7 @@ tbody tr:hover{
 
     .filtros{
         flex-direction:column;
+        align-items:stretch;
         padding:15px;
     }
 
@@ -449,12 +478,18 @@ tbody tr:hover{
     #pesquisa,
     .btn-filtrar{
         width:100%;
+        flex:1 1 auto;
+    }
+
+    .btn-filtrar{
+        justify-content:center;
     }
 
     /* Tabela */
 
     .tabela-container{
         overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
     }
 
     table{
@@ -465,6 +500,10 @@ tbody tr:hover{
         flex-direction:column;
         align-items:flex-start;
     }
+
+    .paginacao-botoes{
+        width:100%;
+    }
 }
 
 /* celulares pequenos - 480px */
@@ -473,6 +512,14 @@ tbody tr:hover{
 
     .logo{
         font-size:1.7rem;
+    }
+
+    nav{
+        flex-direction:column;
+    }
+
+    .menu{
+        width:100%;
     }
 
     .cabecalho h1{
