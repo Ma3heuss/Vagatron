@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada e Saída</title>
+
+    <link rel="stylesheet" href="css/entradasaida.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!------------------- Barra lateral ------------------->
+     <div class="sidebar">
+
+        <h1 class="logo">VAGATRON</h1>
+        <p class="subtitulo">Sistema de Estacionamento</p>
+
+        <img src="imagens/UGB.png" alt="UGB" class="ugb">
+
+        <nav>
+
+            <a href="dashboard.html" class="menu ">
+                <img src="imagens/casa-preta.png" alt="casa-preta" class="casa-preta">
+                Dashboard
+            </a>
+
+            <a href="veiculos.html" class="menu">
+                <img src="imagens/carro-preto.png" alt="carro-preto" class="carro-preto">
+                Veículos
+            </a>
+
+            <a href="entrada-saida.html" class="menu ativo">
+                <img src="imagens/seta-preta.png" alt="seta-preta" class="seta-preta">
+                Entrada e Saída
+            </a>
+
+            <a href="relatorios.html" class="menu">
+                <img src="imagens/relatorio.png" alt="relatorio" class="relatorio">
+                Relatórios
+            </a>
+
+            <a href="usuarios.html" class="menu">
+                <img src="imagens/usuario.png" alt="usuario" class="usuario">
+                Usuários
+            </a>
+
+            <a href="configuracoes.html" class="menu">
+                <img src="imagens/configuracao.png" alt="configuracao" class="configuracao">
+                Configurações
+            </a>
+
+        </nav>
+
+        <a href="login.html" class="sair">
+            <img src="imagens/sair1.png" alt="sair1" class="sair1">
+            Sair
+        </a>
+
+    </div>
+
+    <!-------------------- Conteudo da Pagina (entrada e saida) -------------------->
+    <main class="conteudo">
+
+        <div class="cabecalho">
+
+            <div>
+                <h1>Entrada e Saída</h1>
+                <p>Acompanhe em tempo real as movimentações do estacionamento</p>
+            </div>
+
+            </div>
+
+        </div>
+
+        <!-- Filtros -->
+        <div class="filtros">
+
+            <input
+                type="date"
+                id="filtroData">
+
+            <select id="filtroTipo">
+                <option value="">Todos os tipos</option>
+                <option value="Entrada">Entrada</option>
+                <option value="Saída">Saída</option>
+            </select>
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Buscar por placa">
+
+            <button class="btn-filtrar" id="btnFiltrar">
+                <i class="fa-solid fa-filter"></i>
+                Filtrar
+            </button>
+
+        </div>
+
+        <!-- Tabela de movimentações -->
+        <div class="tabela-container">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Placa</th>
+                        <th>Veículo</th>
+                        <th>Data/Hora</th>
+                        <th>Imagem</th>
+                        <th>Tempo de Permanência</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaMovimentacoes"></tbody>
+
+            </table>
+
+        </div>
+
+        <!-- Paginação -->
+        <div class="paginacao" id="paginacao"></div>
+
+    </main>
+
+    <script src="js/entradasaida.js"></script>
+</body>
+</html>
