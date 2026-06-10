@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários - VAGATRON</title>
+    <link rel="stylesheet" href="css/usuarios.css">
+</head>
+<body>
+
+    <div class="sidebar">
+
+        <h1 class="logo">VAGATRON</h1>
+
+        <p class="subtitulo">
+            Sistema de Estacionamento
+        </p>
+
+        <img src="imagens/UGB.png" alt="UGB" class="ugb">
+
+        <nav>
+
+            
+            <a href="dashboard.html">
+                <img src="imagens/casa-preta.png" class="icone">
+                Dashboard
+            </a>
+
+           
+            <a href="veiculos.html">
+                <img src="imagens/carro-preto.png" class="icone">
+                Veículos
+            </a>
+
+         
+            <a href="entrada-saida.html">
+                <img src="imagens/seta-preta.png" class="icone">
+                Entrada e Saída
+            </a>
+
+          
+            <a href="relatorios.html">
+                <img src="imagens/relatorio.png" class="icone">
+                Relatórios
+            </a>
+
+           
+            <a href="usuarios.html" class="ativo">
+                <img src="imagens/usuario.png" class="icone">
+                Usuários
+            </a>
+
+          
+            <a href="configuracoes.html">
+                <img src="imagens/configuracao.png" class="icone">
+                Configurações
+            </a>
+
+        </nav>
+
+    </div>
+
+    <div class="conteudo">
+
+        <div class="card">
+
+            <div class="cabecalho">
+
+                <h1>Usuários</h1>
+
+                <button class="btn-azul">
+                    Novo Usuário
+                </button>
+
+            </div>
+
+            <div class="formulario">
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Nome"
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                >
+
+                <select id="cargo">
+                    <option value="">Cargo</option>
+                    <option>Administrador</option>
+                    <option>Funcionário</option>
+                    <option>Segurança</option>
+                </select>
+
+                <button onclick="adicionarUsuario()">
+                    Salvar
+                </button>
+
+            </div>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Cargo</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabelaUsuarios">
+
+                    <tr>
+                        <td>José Miguel</td>
+                        <td>jose@ugb.edu.br</td>
+                        <td>Administrador</td>
+                        <td>
+                            <span class="ativo-status">
+                                Ativo
+                            </span>
+                        </td>
+                        <td>
+                            <button class="editar">Editar</button>
+                            <button class="excluir">Excluir</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <script src="js/usuarios.js"></script>
+
+</body>
+</html>

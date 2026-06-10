@@ -1,0 +1,143 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6fa;
+    display:flex;
+}
+
+.sidebar{
+    width:270px;
+    height:100vh;
+    background:white;
+    padding:25px;
+    border-right:1px solid #ddd;
+}
+
+.logo{
+    color:#2563eb;
+    margin-bottom:10px;
+}
+
+.subtitulo{
+    color:#666;
+    font-size:14px;
+}
+
+.ugb{
+    width:120px;
+    display:block;
+    margin:25px auto;
+}
+
+nav{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+nav a{
+    text-decoration:none;
+    color:black;
+    padding:12px;
+    border-radius:10px;
+}
+
+.ativo{
+    background:#2563eb;
+    color:white;
+}
+
+.conteudo{
+    flex:1;
+    padding:30px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+}
+
+.cabecalho{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.cabecalho h1{
+    color:#163a7a;
+}
+
+.cabecalho p{
+    color:#666;
+    margin-top:5px;
+}
+
+.btn-azul{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.formulario{
+    display:flex;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.formulario input,
+.formulario select{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.formulario button{
+    background:#22c55e;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#f5f7fb;
+    text-align:left;
+    padding:15px;
+}
+
+td{
+    padding:15px;
+    border-bottom:1px solid #eee;
+}
+
+.ativo-status{
+    background:#d1fae5;
+    color:#065f46;
+    padding:5px 12px;
+    border-radius:20px;
+}
+.icone{
+    width:22px;
+    height:22px;
+}
+
+nav a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
