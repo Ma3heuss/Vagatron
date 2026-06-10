@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relatórios</title>
+<link rel="stylesheet" href="css/relatorios.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<div class="sidebar">
+<h1 class="logo">VAGATRON</h1>
+<p class="subtitulo">Sistema de Estacionamento</p>
+<img src="imagens/UGB.png" class="ugb">
+<nav>
+    
+<a href="dashboard.html" class="menu ">
+    <img src="imagens/casa-preta.png" alt="casa-preta" class="casa-preta">
+    Dashboard
+</a>
+
+ <a href="veiculos.html" class="menu">
+    <img src="imagens/carro-preto.png" alt="carro-preto" class="carro-preto">
+    Veículos
+</a>
+
+
+ <a href="entrada-saida.html" class="menu">
+    <img src="imagens/seta-preta.png" alt="seta-preta" class="seta-preta">
+    Entrada e Saída
+</a>
+
+
+<a href="relatorios.html" class="menu ativo">
+    <img src="imagens/relatorio.png" alt="relatorio" class="relatorio">
+    Relatórios
+</a>
+
+<a href="usuarios.html" class="menu">
+    <img src="imagens/usuario.png" alt="usuario" class="usuario">
+    Usuários
+</a>
+
+ <a href="configuracoes.html" class="menu">
+    <img src="imagens/configuracao.png" alt="configuracao" class="configuracao">
+    Configurações
+</a>
+
+</nav>
+
+ <a href="login.html" class="sair">
+    <img src="imagens/sair1.png" alt="sair1" class="sair1">
+    Sair
+</a>
+
+</div>
+
+<main class="conteudo">
+<div class="cabecalho">
+<h1>Relatórios</h1>
+<p>Visualize e extraia informações detalhadas sobre as movimentações.</p>
+</div>
+
+
+<div class="filtro-box">
+
+
+<div class="campo-filtro">
+    <label for="dataInicial">Data inicial</label>
+    <input type="date" id="dataInicial">
+</div>
+
+<div class="campo-filtro">
+    <label for="dataFinal">Data final</label>
+    <input type="date" id="dataFinal">
+</div>
+
+<div class="filtro-item">
+    <label for="status">Status</label>
+    <select id="status">
+        <option value="">Todos</option>
+        <option value="Em andamento">Em andamento</option>
+        <option value="Finalizado">Finalizado</option>
+    </select>
+</div>
+
+<div class="filtro-item">
+    <label for="horario">Horário</label>
+    <select id="horario">
+        <option value="">Todos</option>
+        <option value="Manhã">Manhã</option>
+        <option value="Tarde">Tarde</option>
+        <option value="Noite">Noite</option>
+    </select>
+</div>
+
+    <input type="text" id="placa" placeholder="Buscar por placa">
+
+<button id="btnLimpar" class="vermelho">
+    Limpar filtros
+</button>
+
+<button id="btnFiltrar" class="azul">
+    Aplicar filtros
+</button>
+
+
+
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <h2 id="totalEntradas">86</h2>
+        <p>Entradas</p>
+    </div>
+
+    <div class="card">
+        <h2 id="totalSaidas">74</h2>
+        <p>Saídas</p>
+    </div>
+
+    <div class="card">
+        <h2 id="veiculosUnicos">128</h2>
+        <p>Veículos únicos</p>
+    </div>
+
+    <div class="card">
+        <h2 id="tempoTotal">325h 40m</h2>
+        <p>Tempo total</p>
+    </div>
+
+</div>
+
+<div class="tabela-container">
+<div class="topo-tabela">
+<h2>Movimentações</h2>
+<button class="btn-exportar">
+    Exportar CSV
+</button>
+</div>
+<table>
+<thead>
+<table>
+
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>Placa</th>
+            <th>Veículo</th>
+            <th>Data/Hora</th>
+            <th>Entrada</th>
+            <th>Saída</th>
+            <th>Tempo permanência</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody id="tabelaRelatorios">
+    </tbody>
+
+</table>
+</thead>
+
+</table>
+</div>
+</main>
+<script src="js/relatorios.js"></script>
+</body>
+</html>
