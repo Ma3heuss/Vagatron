@@ -6,32 +6,33 @@
 }
 
 body{
-    background:#f4f6fa;
     display:flex;
+    background:#f4f6fa;
 }
 
 .sidebar{
     width:270px;
     height:100vh;
     background:white;
-    padding:25px;
+    padding:20px;
     border-right:1px solid #ddd;
 }
 
 .logo{
     color:#2563eb;
-    margin-bottom:10px;
 }
 
 .subtitulo{
     color:#666;
     font-size:14px;
+    margin-bottom:20px;
 }
 
 .ugb{
     width:120px;
     display:block;
-    margin:25px auto;
+    margin:auto;
+    margin-bottom:30px;
 }
 
 nav{
@@ -45,11 +46,23 @@ nav a{
     color:black;
     padding:12px;
     border-radius:10px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+nav a:hover{
+    background:#f0f0f0;
 }
 
 .ativo{
     background:#2563eb;
     color:white;
+}
+
+.icone{
+    width:22px;
+    height:22px;
 }
 
 .conteudo{
@@ -59,54 +72,39 @@ nav a{
 
 .card{
     background:white;
+    padding:25px;
     border-radius:20px;
-    padding:30px;
 }
 
 .cabecalho{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:30px;
+    margin-bottom:25px;
 }
 
 .cabecalho h1{
     color:#163a7a;
 }
 
-.cabecalho p{
-    color:#666;
-    margin-top:5px;
-}
-
-.btn-azul{
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:12px 20px;
-    border-radius:10px;
-    cursor:pointer;
-}
-
 .formulario{
     display:flex;
     gap:10px;
     margin-bottom:25px;
+    flex-wrap:wrap;
 }
 
 .formulario input,
 .formulario select{
-    padding:12px;
-    border:1px solid #ddd;
-    border-radius:10px;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
 }
 
 .formulario button{
     background:#22c55e;
     color:white;
     border:none;
-    padding:12px 20px;
-    border-radius:10px;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
 }
 
 table{
@@ -116,8 +114,8 @@ table{
 
 th{
     background:#f5f7fb;
-    text-align:left;
     padding:15px;
+    text-align:left;
 }
 
 td{
@@ -125,19 +123,21 @@ td{
     border-bottom:1px solid #eee;
 }
 
-.ativo-status{
-    background:#d1fae5;
-    color:#065f46;
-    padding:5px 12px;
-    border-radius:20px;
-}
-.icone{
-    width:22px;
-    height:22px;
+.editar{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
+    margin-right:5px;
 }
 
-nav a{
-    display:flex;
-    align-items:center;
-    gap:12px;
+.excluir{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:6px;
+    cursor:pointer;
 }
