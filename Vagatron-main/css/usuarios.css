@@ -182,3 +182,103 @@ td{
     width:22px;
     height:22px;
 }
+
+
+
+
+/* Tablet */
+
+@media (max-width: 1024px){
+
+    .sidebar{
+        width:220px;
+    }
+
+    .conteudo{
+        padding:15px;
+    }
+
+    .formulario{
+        flex-direction:column;
+    }
+
+    .formulario input,
+    .formulario select,
+    .formulario button{
+        width:100%;
+    }
+
+}
+
+/* Celular */
+
+@media (max-width: 768px){
+
+    body{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        height:auto;
+        position:static;
+        border-right:none;
+        border-bottom:1px solid #ddd;
+    }
+
+    nav{
+        margin-top:15px;
+    }
+
+    .conteudo{
+        width:100%;
+        padding:10px;
+    }
+
+    .card{
+        padding:15px;
+    }
+
+    .cabecalho h1{
+        font-size:28px;
+    }
+
+    table{
+        font-size:14px;
+    }
+
+    th,
+    td{
+        padding:8px;
+    }
+
+    .sair{
+        position:static;
+        margin-top:15px;
+    }
+
+}
+
+/* Celulares pequenos */
+
+@media (max-width: 480px){
+
+    .logo{
+        font-size:24px;
+    }
+
+    .ugb{
+        width:90px;
+    }
+
+    .cabecalho h1{
+        font-size:22px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+}
