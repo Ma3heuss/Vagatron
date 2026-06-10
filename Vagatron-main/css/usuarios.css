@@ -141,3 +141,44 @@ td{
     border-radius:6px;
     cursor:pointer;
 }
+
+
+
+
+
+
+.sidebar{
+    width:270px;
+    height:100vh;
+    background:white;
+    padding:20px;
+    border-right:1px solid #ddd;
+
+    position:relative;
+}
+
+.sair{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    right:20px;
+
+    text-decoration:none;
+    color:black;
+
+    padding:12px;
+    border-radius:10px;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.sair:hover{
+    background:#f0f0f0;
+}
+
+.sair1{
+    width:22px;
+    height:22px;
+}
