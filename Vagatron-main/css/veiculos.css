@@ -13,8 +13,6 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/* baarra lateral */
-
 .sidebar{
     width:250px;
     background:#fff;
@@ -75,7 +73,6 @@ nav{
     padding:15px;
 }
 
-/* conteudo */
 
 .conteudo{
     flex:1;
@@ -117,7 +114,6 @@ nav{
     transform:translateY(-2px);
 }
 
-/* filtros */
 
 .filtros{
     background:white;
@@ -146,7 +142,6 @@ nav{
     width:180px;
 }
 
-/* tabela */
 
 .tabela-container{
     background:white;
@@ -183,7 +178,6 @@ tbody tr:hover{
     background:#fafcff;
 }
 
-/* Status */
 
 .status{
     padding:8px 16px;
@@ -202,7 +196,6 @@ tbody tr:hover{
     color:#d63c3c;
 }
 
-/* botões */
 
 td button{
     width:38px;
@@ -227,8 +220,6 @@ td button i{
     color:#dc2626;
 }
 
-/* ------ form de veiculos ------ */
-
 .modal{
     display:none; 
 
@@ -246,8 +237,6 @@ td button i{
 
     z-index:9999;
 }
-
-/* card */
 
 .modal-content{
 
@@ -291,7 +280,7 @@ td button i{
     }
 }
 
-/* titulo */
+
 
 .modal-content h2{
     color:#102a56;
@@ -300,7 +289,6 @@ td button i{
     text-align:center;
 }
 
-/* labels */
 
 .modal-content label{
     display:block;
@@ -311,7 +299,7 @@ td button i{
     font-size:.95rem;
 }
 
-/* inputs */
+
 
 .modal-content input,
 .modal-content select{
@@ -340,7 +328,7 @@ td button i{
     rgba(13,91,225,.15);
 }
 
-/* grid */
+
 
 .form-grid{
     display:grid;
@@ -348,7 +336,7 @@ td button i{
     gap:15px;
 }
 
-/* Botões */
+
 
 .acoes-modal{
     margin-top:30px;
@@ -423,19 +411,11 @@ td button i{
     height:30px;   
 }
 
-.configuracao {
-    width:30px;
-    height:30px;
-}
-
 .sair1 {
     width:30px;
     height:30px;
 }
 
-/* ---------------- Responsividade ----------------*/
-
-/* tablet - 1024px */
 
 @media (max-width: 1024px){
 
@@ -459,8 +439,6 @@ td button i{
 
 }
 
-/* celular - 768px */
-
 @media (max-width: 768px){
 
     body{
@@ -468,7 +446,7 @@ td button i{
     }
     
 
-    /* barra lateral */
+
 
     .sidebar{
 
@@ -500,8 +478,6 @@ td button i{
         margin-top:20px;
     }
 
-    /* conteudo */
-
     .conteudo{
         padding:15px;
         width: 100%;
@@ -519,7 +495,6 @@ td button i{
         width:100%;
     }
 
-    /* filtros */
 
     .filtros{
         flex-direction:column;
@@ -534,8 +509,6 @@ td button i{
         width:100%;
     }
 
-    /* Tabela */
-
     .tabela-container{
         overflow-x:auto;
     }
@@ -543,8 +516,6 @@ td button i{
     table{
         min-width:700px;
     }
-
-    /* modal */
 
     .modal-content{
         width:95%;
@@ -563,8 +534,6 @@ td button i{
         width:100%;
     }
 }
-
-/* celulares pequenos - 480px */
 
 @media (max-width: 480px){
 
@@ -595,8 +564,6 @@ td button i{
     }
 
 }
-
-/* --------- Responsividade no formulario --------- */
 
 @media (max-width: 768px){
 
@@ -644,8 +611,6 @@ td button i{
         width:100%;
     }
 }
-
-/* celulares pequenos */
 
 @media (max-width: 480px){
 
